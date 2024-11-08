@@ -7,45 +7,41 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Tela Inicial -->
-  <div class="container" id="homeScreen">
+  <div class="container">
     <h1>Biome Explorer</h1>
     <p>Um jogo interativo sobre diversidade, inclusão e sociedade.</p>
-    <button class="btn-primary" onclick="startGame()">Jogar Agora</button>
-    <button class="btn-secondary" onclick="showModal()">Sobre o Jogo</button>
+    <button class="btn-primary" onclick="jogar()">Jogue Agora</button>
+    <button class="btn-secondary" onclick="abrirModal()">Sobre o jogo</button>
   </div>
 
-  <!-- Modal de "Sobre o Jogo" -->
   <div class="modal-overlay" id="modalOverlay">
     <div class="modal">
       <h2>Sobre o Jogo</h2>
-      <p>Biome Explorer é um jogo educativo onde você explora decisões ambientais e interage com personagens folclóricos brasileiros para proteger o meio ambiente.</p>
-      <button class="btn-primary" onclick="closeModal()">Fechar</button>
+      <p>Explorando biomas e conhecendo a diversidade!</p>
+      <button onclick="fecharModal()">Fechar</button>
     </div>
   </div>
 
-  <!-- Tela de Seleção de Personagem -->
   <div class="character-selection" id="characterSelection">
-    <h2>Escolha seu personagem</h2>
-    <div class="character-card" onclick="selectCharacter('Curupira')">
-      <img src="images/curupira.png" alt="Curupira">
+    <h2>Selecione seu Personagem</h2>
+    <div class="character-card" onclick="selecionarPersonagem('Curupira')">
+      <img src="curupira.png" alt="Curupira">
       <p>Curupira</p>
     </div>
-    <div class="character-card" onclick="selectCharacter('Iara')">
-      <img src="images/iara.png" alt="Iara">
+    <div class="character-card" onclick="selecionarPersonagem('Iara')">
+      <img src="iara.png" alt="Iara">
       <p>Iara</p>
     </div>
-    <div class="character-card" onclick="selectCharacter('Saci')">
-      <img src="images/saci.png" alt="Saci">
+    <div class="character-card" onclick="selecionarPersonagem('Saci')">
+      <img src="saci.png" alt="Saci">
       <p>Saci</p>
     </div>
   </div>
 
-  <!-- Tela de Introdução -->
   <div class="game-intro" id="gameIntro">
-    <h2>Bem-vindo ao Biome Explorer</h2>
-    <p id="chosenCharacter"></p>
-    <button class="btn-primary" onclick="startAdventure()">Começar Aventura</button>
+    <h2>Bem-vindo ao Biome Explorer!</h2>
+    <p>Você selecionou o personagem <span id="selectedCharacter"></span>.</p>
+    <button onclick="iniciarJogo()">Começar</button>
   </div>
 
   <script src="script.js"></script>
