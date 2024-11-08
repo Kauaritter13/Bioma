@@ -18,5 +18,5 @@ function selecionarPersonagem(personagem) {
 }
 
 function iniciarJogo() {
-  alert("O jogo está em construção. Em breve, você poderá explorar os biomas com seu personagem!");
+  alert("O jogo está em construção. Em breve, você poderá governar sua cidade!");
 }
