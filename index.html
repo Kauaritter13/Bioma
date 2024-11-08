@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biome Explorer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Tela Inicial -->
+  <div class="container" id="homeScreen">
+    <h1>Biome Explorer</h1>
+    <p>Um jogo interativo sobre diversidade, inclusão e sociedade.</p>
+    <button class="btn-primary" onclick="startGame()">Jogar Agora</button>
+    <button class="btn-secondary" onclick="showModal()">Sobre o Jogo</button>
+  </div>
+
+  <!-- Modal de "Sobre o Jogo" -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <h2>Sobre o Jogo</h2>
+      <p>Biome Explorer é um jogo educativo onde você explora decisões ambientais e interage com personagens folclóricos brasileiros para proteger o meio ambiente.</p>
+      <button class="btn-primary" onclick="closeModal()">Fechar</button>
+    </div>
+  </div>
+
+  <!-- Tela de Seleção de Personagem -->
+  <div class="character-selection" id="characterSelection">
+    <h2>Escolha seu personagem</h2>
+    <div class="character-card" onclick="selectCharacter('Curupira')">
+      <img src="images/curupira.png" alt="Curupira">
+      <p>Curupira</p>
+    </div>
+    <div class="character-card" onclick="selectCharacter('Iara')">
+      <img src="images/iara.png" alt="Iara">
+      <p>Iara</p>
+    </div>
+    <div class="character-card" onclick="selectCharacter('Saci')">
+      <img src="images/saci.png" alt="Saci">
+      <p>Saci</p>
+    </div>
+  </div>
+
+  <!-- Tela de Introdução -->
+  <div class="game-intro" id="gameIntro">
+    <h2>Bem-vindo ao Biome Explorer</h2>
+    <p id="chosenCharacter"></p>
+    <button class="btn-primary" onclick="startAdventure()">Começar Aventura</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
